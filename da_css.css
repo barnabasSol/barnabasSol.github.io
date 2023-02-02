@@ -1,0 +1,56 @@
+body {
+  background-color: #222831;
+}
+
+header {
+  background-color: #222831;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  margin-top: 13px;
+  margin-right: 80px;
+  background-color: #222831;
+  border-radius: 10px;
+  color:whitesmoke;
+  width: 100px;
+  height: 30px;
+  border: none;
+  transition: background-color 0.5s;
+
+}
+
+.end_gap{
+  margin-right: 130px;
+}
+
+button:hover{
+    background-color: #393E46;
+    cursor: pointer;
+}
+
+.avatar{
+    height: 350px;
+    width: 350px;
+    border-radius: 100px;
+}
+
+.prof_img_div {
+  height: fit-content;
+  background-color: #222831;
+  transition: width 0.5s;
+  display: flex;
+  justify-content: left;
+}
+
+.name{
+    margin-top: 55px;
+    font-family: monospace;
+    font-size:xx-large;
+    color: whitesmoke;
+}
+
+
+ 
