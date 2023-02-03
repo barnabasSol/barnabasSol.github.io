@@ -1,5 +1,7 @@
 body {
   background-color: #222831;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -7,6 +9,13 @@ header {
   height: 50px;
   display: flex;
   justify-content: flex-end;
+}
+
+.line{
+  height: 10px;
+}
+hr{
+  width: 100%;
 }
 
 button {
@@ -18,8 +27,7 @@ button {
   width: 100px;
   height: 30px;
   border: none;
-  transition: background-color 0.5s;
-
+  transition: background-color 0.5s, opacity 0.2s;
 }
 
 .end_gap{
@@ -31,26 +39,46 @@ button:hover{
     cursor: pointer;
 }
 
-.avatar{
-    height: 350px;
-    width: 350px;
-    border-radius: 100px;
+button:active{
+  opacity: 0.5;
 }
 
-.prof_img_div {
-  height: fit-content;
-  background-color: #222831;
-  transition: width 0.5s;
-  display: flex;
-  justify-content: left;
+.avatar{
+    height: 320px;
+    width: 320px;
+    border-radius: 100px;
+    margin-left: 90px;
 }
 
 .name{
-    margin-top: 55px;
+    margin-top: 75px;
+    margin-right: 600px;
+    width: fit-content;
+    height: fit-content;
     font-family: monospace;
     font-size:xx-large;
     color: whitesmoke;
 }
+
+.info{
+  width: fit-content;
+  color: whitesmoke;
+  font-family: monospace;
+  font-size: large;
+}
+
+.prof_img_div {
+  margin-top: 26px;
+  height: 320px;
+  background-color: #222831;
+  transition: width 0.5s;
+  display: flex;
+  justify-content: last baseline;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+
 
 
  
