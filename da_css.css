@@ -7,6 +7,7 @@ body {
 header {
   background-color: #222831;
   height: 50px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -60,7 +61,13 @@ button:active{
     color: whitesmoke;
 }
 
+.info_div{
+  display: flex;
+  justify-content: left;
+}
+
 .info{
+  margin-top: 0px;
   width: fit-content;
   color: whitesmoke;
   font-family: monospace;
@@ -68,7 +75,7 @@ button:active{
 }
 
 .prof_img_div {
-  margin-top: 26px;
+  margin-top: 15px;
   height: 320px;
   background-color: #222831;
   transition: width 0.5s;
@@ -76,9 +83,51 @@ button:active{
   justify-content: last baseline;
   flex-direction: column;
   flex-wrap: wrap;
-
 }
 
+.projects_div{
+  display: flex;
+  justify-content: center;
+}
+
+.car_btn{
+  display: flex;
+  justify-content: left;
+  border-radius: 15px;
+  height: 55px;
+  width: 150px;
+  border: white;
+  background-color: #393E46;
+}
+
+.car_link{
+  text-decoration: none;
+}
+
+.car_icon{
+  width: 45px;
+
+}
+.car_btn_name{
+  font-size: small;
+  font-family: monospace;
+}
+.hotel_btn{
+  display: flex;
+  justify-content: left;
+  border-radius: 15px;
+  height: 55px;
+  width: 150px;
+  background-color: #393E46;
+}
+
+.hotel_icon{
+  width: 45px;
+}
+
+.hotel_link{
+  text-decoration: none;
+}
 
 
  
