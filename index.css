@@ -1,0 +1,420 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #2c3333;
+}
+.cheat {
+  position: absolute;
+  height: 16%;
+  width: 10%;
+  z-index: 4;
+  left: 29%;
+  opacity: 0;
+}
+.block {
+  width: 240px;
+  height: 70px;
+  border: none;
+  background-color: #2e4f4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  top: 11%;
+  right: 12%;
+  transition: transform 0.9s, opacity 1s;
+  font-size: xx-large;
+  border-radius: 10px;
+}
+
+.socials {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  opacity: 1;
+  transition: scale 0.3s;
+}
+
+.socials:hover {
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.socials:active {
+  scale: 0.9;
+}
+
+.contact_div:hover .block {
+  /* opacity: 0; */
+  transform: translateX(-345%);
+}
+
+/* .contact_div:hover {
+  border-left: 2px solid black;
+} */
+
+.contact_div:hover .roll {
+  width: 100%;
+}
+
+.socials img {
+  width: 80px;
+  height: 80px;
+}
+
+.title {
+  grid-area: title;
+  background-color: #0e8388;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 20px;
+}
+
+.title span {
+  color: white;
+  font-size: 2.3em;
+}
+
+.contact_div {
+  position: relative;
+  grid-area: contact_div;
+  background-color: #2c3333;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.contact_div button {
+  color: white;
+}
+
+.roll {
+  overflow: hidden;
+  width: 0%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  transition: width 0.8s;
+  border-radius: 10%;
+}
+
+.about_me {
+  position: relative;
+  grid-area: about_me;
+  background-color: #2c3333;
+  display: flex;
+  align-items: center;
+}
+
+.about_me img {
+  border-radius: 50%;
+  margin-bottom: 7%;
+  margin-left: 2%;
+  width: 300px;
+  height: 300px;
+}
+
+.text_div {
+  width: 50%;
+  height: fit-content;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.text_div .my_name {
+  font-size: 3em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.text_div .passage {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.about_me:hover .about_me_child {
+  opacity: 0;
+}
+
+.about_me_child {
+  height: 100%;
+  width: 100%;
+  background-color: #2c3333;
+  transition: width 0.8s, opacity 0.8s;
+  position: absolute;
+  bottom: 0.3%;
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_me_child span {
+  color: white;
+  font-size: 4em;
+}
+
+.hover {
+  font-size: 1em !important;
+}
+.projects {
+  grid-area: projects;
+  background-color: #0e8388;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-top-left-radius: 20px;
+}
+
+.projects > span {
+  color: white;
+  font-size: 2.4em;
+}
+
+.projects button {
+  width: 80%;
+  height: 0%;
+  transition: height 0.5s, background-color 0.5s, opacity 0.5s;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+}
+
+.projects button span {
+  font-size: 1.3em;
+  color: white;
+  opacity: 0;
+}
+
+.projects:hover button {
+  background-color: #2e4f4f;
+  height: 27%;
+}
+
+.projects:hover span {
+  opacity: 1;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "title title title title contact_div contact_div contact_div contact_div contact_div contact_div"
+    "about_me about_me about_me about_me about_me about_me about_me projects projects projects";
+  grid-template-rows: 0.5fr 5fr;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+@media (height<500px) {
+  main {
+    height: 130vh;
+    grid-template-areas:
+      "title title title title contact_div contact_div contact_div contact_div contact_div contact_div"
+      "about_me about_me about_me about_me about_me about_me about_me about_me about_me about_me"
+      "about_me about_me about_me about_me about_me about_me about_me about_me about_me about_me"
+      "projects projects projects projects projects projects projects projects projects projects";
+    grid-template-rows: 0.5fr 3fr 3fr 2fr;
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+/* phones */
+
+@media (width<=400px) {
+  .block {
+    display: none;
+  }
+  .roll {
+    width: 100%;
+  }
+  .about_me_child {
+    display: none;
+  }
+}
+
+@media (width<500px) and (width>400px) {
+  main {
+    height: 130vh;
+    grid-template-areas:
+      "title title title title contact_div contact_div contact_div contact_div contact_div contact_div"
+      "about_me about_me about_me about_me about_me about_me about_me about_me about_me about_me"
+      "about_me about_me about_me about_me about_me about_me about_me about_me about_me about_me"
+      "projects projects projects projects projects projects projects projects projects projects";
+    grid-template-rows: 0.5fr 3fr 3fr 2fr;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .block {
+    width: 115px;
+    height: 40px;
+    font-size: 1em;
+    top: 0%;
+  }
+  .roll {
+    width: 100%;
+  }
+  .block {
+    display: none;
+  }
+
+  .contact_div:hover .block {
+    opacity: 0;
+  }
+
+  .about_me img {
+    height: 150px;
+    width: 150px;
+  }
+  .about_me_child {
+    display: none;
+  }
+  .hover {
+    content: "click me";
+  }
+  .text_div {
+    width: 100%;
+    position: static;
+    text-align: center;
+  }
+  .about_me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about_me .my_name {
+    font-size: 2em;
+  }
+  .projects button {
+    height: 140px;
+  }
+
+  .socials {
+    height: 40px;
+    width: 40px;
+  }
+
+  .socials img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .title span {
+    font-size: 1.5em;
+  }
+
+  .projects {
+    border-radius: 0;
+  }
+  .projects button span {
+    opacity: 1;
+    color: black;
+  }
+}
+
+/*tablets*/
+
+@media (width<1140px) {
+  main {
+    height: 130vh;
+    grid-template-areas:
+      "title title title title contact_div contact_div contact_div contact_div contact_div contact_div"
+      "about_me about_me about_me about_me about_me about_me about_me about_me about_me about_me"
+      "about_me about_me about_me about_me about_me about_me about_me about_me about_me about_me"
+      "projects projects projects projects projects projects projects projects projects projects";
+    grid-template-rows: 0.5fr 3fr 3fr 2fr;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  .projects button span {
+    color: black;
+    opacity: 1;
+  }
+
+  .roll {
+    width: 100%;
+  }
+  .block {
+    display: none;
+  }
+  .about_me_child {
+    display: none;
+  }
+
+  .about_me img {
+    height: 150px;
+    width: 150px;
+  }
+  .hover {
+    content: "click me";
+  }
+  .text_div {
+    width: 100%;
+    position: static;
+    text-align: center;
+  }
+  .about_me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about_me .my_name {
+    font-size: 2em;
+  }
+  .projects button {
+    height: 140px;
+  }
+
+  .socials {
+    height: 40px;
+    width: 40px;
+  }
+
+  .socials img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .title span {
+    font-size: 1.5em;
+  }
+
+  .projects {
+    border-radius: 0;
+  }
+  .projects button {
+    width: 60%;
+  }
+}
+
+@media (width>1366px) {
+  .block {
+    display: none;
+  }
+  .roll {
+    width: 100%;
+  }
+}
+
+@media (height<671px) and (width<1366px) {
+  .projects button {
+    height: 30%;
+    background-color: #2e4f4f;
+    color: white;
+    font-size: small;
+  }
+}

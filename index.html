@@ -1,49 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="da_css.css" />
-    <title>My Portfolio</title>
-    <body>
-      <header>
-        <button>Theme</button>
-        <button>My Work</button>
-        <button class="end_gap">Contact</button>
-      </header>
-      <div class="line"><hr /></div>
-      <div class="prof_img_div">
-        <img class="avatar" src="daftpunktocat.gif" alt="Barnabas Solomon" />
-        <p class="name">Baranabs Solomon</p>
-        <div class="info_div">
-          <p class="info">
-            Welcome to my portfolio, a work in progress dynamic site. <br> Here you
-            will find: <br />
-            examples of my work, recent projects, and what I can do for you.
-            <br />
-            Please take your time to explore and contact me. <br />if you have
-            any questions or would like an estimate on a project. <br />
-            Thank you for visiting!
-          </p>
-        </div>
-      </div>
-      <div class="projects_div">
-        <a
-          class="car_link"
-          href="https://github.com/barnabasSol/Car-Rental-Application"
-        >
-          <button class="car_btn">
-            <img class="car_icon" src="car_23773.ico" alt="a car" />
-            <p class="car_btn_name">Rent a Car Project</p>
-          </button>
-        </a>
-
-        <a class="hotel_link"
-        href="https://github.com/barnabasSol/updatedHotel">
-          <button class="hotel_btn">
-            <img class="hotel_icon" src="hotel.png" alt="a car" />
-            <p class="hotel_name">Hotel Reservation</p>
-          </button>
-        </a>
-      </div>
-    </body>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
+  <body>
+    <main>
+      <div class="cheat"></div>
+      <header class="title">
+        <span>Portfolio</span>
+      </header>
+      <header class="contact_div">
+        <div class="block">Socials/Contact</div>
+        <div class="roll">
+          <a href="mailto:barnabassolomon336@gmail.com" target="_blank">
+            <button id="email" class="socials">
+              <img src="images/gmail2.png" alt="" />
+            </button>
+          </a>
+          <a href="https://twitter.com/calmbatmann" target="_blank">
+            <button id="twitter" class="socials">
+              <img src="images/twitter2.png" alt="" />
+            </button>
+          </a>
+          <a href="https://t.me/ohmyhalo">
+            <button id="telegram" class="socials">
+              <img src="images/telegram2.png" alt="" />
+            </button>
+          </a>
+          <a href="https://github.com/barnabasSol" target="_blank">
+            <button id="github" class="socials">
+              <img src="images/github-logo.png" alt="" />
+            </button>
+          </a>
+        </div>
+      </header>
+      <section class="about_me">
+        <img src="images/test1.jpg" alt="" />
+        <div class="text_div">
+          <div class="my_name"><span>Barnabas Solomon</span></div>
+          <div class="passage">
+            <span
+              >I am a Front End Developer with a passion for creating beautiful,
+              user-friendly websites and applications. I have a strong
+              background in HTML, CSS, JavaScript, and I am always
+              looking for ways to improve my skills and stay up-to-date with the
+              latest web technologies.</span
+            >
+          </div>
+        </div>
+        <div class="about_me_child">
+          <span>About Me</span>
+          <span class="hover">hover here</span>
+        </div>
+      </section>
+      <section class="projects">
+        <span>Projects</span>
+        <button><span>Soon</span></button>
+        <button><span>Soon</span></button>
+        <button><span>Soon</span></button>
+      </section>
+    </main>
+  </body>
 </html>
