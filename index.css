@@ -51,7 +51,7 @@ body {
 }
 
 .contact_div:hover .block {
-  /* opacity: 0; */
+  opacity: 0;
   transform: translateX(-345%);
 }
 
